@@ -1,17 +1,16 @@
+
 # CodeBuildBrowser
 
-Small Flask-based frontend and agent layer that integrates with Ollama models.
+Minimal Flask web UI and agent layer for local Ollama models.
 
-Purpose
-- Provide a minimal web UI to chat with a local Ollama model, check model health, and inspect outputs.
+## Features
+- Chat with Ollama models via web interface
+- Health and capabilities endpoints
+- Simple JSON viewer
 
-Dependencies
-- See `requirements.txt` for Python dependencies. Install with `pip install -r requirements.txt`.
-- Ollama (local model runtime) is required to run models locally. Follow the official installer at https://ollama.ai.
-
-Quick start
+## Setup
 1. Clone the repository and open a terminal in the repo root.
-2. Create and activate a virtual environment, then install Python dependencies.
+2. Create and activate a Python virtual environment, then install dependencies:
 
 <details>
 <summary>Windows (PowerShell)</summary>
@@ -35,31 +34,35 @@ pip install -r requirements.txt
 
 </details>
 
-Ollama and model
-- Install Ollama following the official instructions: https://ollama.ai
-- Verify the `ollama` CLI is available:
+## Ollama setup
+1. Install Ollama: https://ollama.ai
+2. Verify CLI:
+	```bash
+	ollama --version
+	```
+3. Pull the default model:
+	```bash
+	ollama pull qwen3:30b
+	```
 
-```bash
-ollama --version
+## Build static assets (optional)
+To bundle and (optionally) minify CSS/JS for production, run:
+
+```powershell
+./scripts/build_static.ps1           # bundle only
+./scripts/build_static.ps1 -Minify   # bundle and minify
 ```
 
-- Pull the model used by the app (default in `agents/base_agent.py`):
-
-```bash
-ollama pull qwen3:30b
-```
-
-Run the app
-- From the repository root, run the Flask app:
+## Run the app
+From the repo root:
 
 ```bash
 python ollama-agents/ollama-app.py
 ```
 
-Notes and troubleshooting
-- If the app cannot find the model, run `ollama ls` to list available models and confirm the model name.
-- If `ollama` is not found, ensure the Ollama binary is on your PATH and restart the terminal.
-- For production use, add minification and cache-busting for static assets.
+## Troubleshooting
+- If the app cannot find the model, run `ollama ls` to list available models and confirm the name.
+- If `ollama` is not found, ensure the binary is on your PATH and restart the terminal.
 
-Credits
-- See `CodeBuildBrowser.md` for a brief project guide and usage tips.
+## Credits
+See `CodeBuildBrowser.md` for a brief guide and usage tips.

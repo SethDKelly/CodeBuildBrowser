@@ -1301,3 +1301,44 @@ ConnectionError: Failed to connect to Ollama. Please check that Ollama is downlo
 2025-11-20 11:15:33 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:15:33] "GET /health HTTP/1.1" 200 -
 2025-11-20 11:15:33 INFO app.errors: 404: /static/build/main.bundle.js
 2025-11-20 11:15:33 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:15:33] "[33mGET /static/build/main.bundle.js HTTP/1.1[0m" 404 -
+2025-11-20 11:39:06 INFO __main__: Ollama app initialized
+2025-11-20 11:39:06 INFO __main__: Starting Flask development server on 0.0.0.0:8000 (debug=True)
+2025-11-20 11:39:06 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.0.107:8000
+2025-11-20 11:39:06 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-11-20 11:39:06 INFO werkzeug:  * Restarting with stat
+2025-11-20 11:39:06 INFO __main__: Ollama app initialized
+2025-11-20 11:39:06 INFO __main__: Starting Flask development server on 0.0.0.0:8000 (debug=True)
+2025-11-20 11:39:06 WARNING werkzeug:  * Debugger is active!
+2025-11-20 11:39:06 INFO werkzeug:  * Debugger PIN: 122-528-945
+2025-11-20 11:39:10 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:10] "GET / HTTP/1.1" 200 -
+2025-11-20 11:39:10 INFO app.errors: 404: /static/build/main.bundle.css
+2025-11-20 11:39:10 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:10] "[33mGET /static/build/main.bundle.css HTTP/1.1[0m" 404 -
+2025-11-20 11:39:10 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:10] "GET /health HTTP/1.1" 200 -
+2025-11-20 11:39:10 INFO app.errors: 404: /static/build/main.bundle.js
+2025-11-20 11:39:10 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:10] "[33mGET /static/build/main.bundle.js HTTP/1.1[0m" 404 -
+2025-11-20 11:39:16 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:16] "GET /capabilities HTTP/1.1" 200 -
+2025-11-20 11:39:19 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:19] "GET /health HTTP/1.1" 200 -
+2025-11-20 11:39:19 INFO app.errors: 404: /static/build/main.bundle.css
+2025-11-20 11:39:19 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:19] "[33mGET /static/build/main.bundle.css HTTP/1.1[0m" 404 -
+2025-11-20 11:39:19 INFO app.errors: 404: /static/build/main.bundle.js
+2025-11-20 11:39:19 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:19] "[33mGET /static/build/main.bundle.js HTTP/1.1[0m" 404 -
+2025-11-20 11:39:21 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:21] "GET / HTTP/1.1" 200 -
+2025-11-20 11:39:21 INFO app.errors: 404: /static/build/main.bundle.css
+2025-11-20 11:39:21 INFO app.errors: 404: /static/build/main.bundle.js
+2025-11-20 11:39:21 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:21] "[33mGET /static/build/main.bundle.css HTTP/1.1[0m" 404 -
+2025-11-20 11:39:21 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:21] "[33mGET /static/build/main.bundle.js HTTP/1.1[0m" 404 -
+2025-11-20 11:39:22 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:22] "GET /health HTTP/1.1" 200 -
+2025-11-20 11:39:24 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:24] "GET /health HTTP/1.1" 200 -
+2025-11-20 11:39:24 INFO app.errors: 404: /static/build/main.bundle.css
+2025-11-20 11:39:24 INFO app.errors: 404: /static/build/main.bundle.js
+2025-11-20 11:39:24 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:24] "[33mGET /static/build/main.bundle.css HTTP/1.1[0m" 404 -
+2025-11-20 11:39:24 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:24] "[33mGET /static/build/main.bundle.js HTTP/1.1[0m" 404 -
+2025-11-20 11:39:25 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:25] "GET / HTTP/1.1" 200 -
+2025-11-20 11:39:26 INFO app.errors: 404: /static/build/main.bundle.css
+2025-11-20 11:39:26 INFO app.errors: 404: /static/build/main.bundle.js
+2025-11-20 11:39:26 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:26] "[33mGET /static/build/main.bundle.css HTTP/1.1[0m" 404 -
+2025-11-20 11:39:26 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:26] "[33mGET /static/build/main.bundle.js HTTP/1.1[0m" 404 -
+2025-11-20 11:39:26 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:39:26] "GET /health HTTP/1.1" 200 -

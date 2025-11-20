@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.venv/
+venv*/
+ENV/
+*.egg-info/
+*.sqlite3
+
+# HTML, CSS, JS build artifacts
+ollama-agents/app/static/build/
+
+# Logs
+responses.log
+*.log
+
+# VS Code
+.vscode/
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+
+# Ignore all by default except source
+# Uncomment below to ignore all except tracked source files
+# *
+# !*.py
+# !*.html
+# !*.css
+# !*.js
