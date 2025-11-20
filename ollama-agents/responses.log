@@ -1213,3 +1213,91 @@ ConnectionError: Failed to connect to Ollama. Please check that Ollama is downlo
 2025-11-20 10:55:27 INFO app.errors: 404: /static/dropdown.css
 2025-11-20 10:55:27 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:55:27] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
 2025-11-20 10:55:27 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:55:27] "GET /health HTTP/1.1" 200 -
+2025-11-20 10:57:49 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:57:49] "GET / HTTP/1.1" 200 -
+2025-11-20 10:57:49 INFO app.errors: 404: /static/style.css
+2025-11-20 10:57:49 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:57:49] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:57:49 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:57:49 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:57:49] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:57:49 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:57:49] "GET /health HTTP/1.1" 200 -
+2025-11-20 10:57:55 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:57:55] "GET / HTTP/1.1" 200 -
+2025-11-20 10:57:55 INFO app.errors: 404: /static/style.css
+2025-11-20 10:57:55 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:57:55] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:57:56 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:57:56 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:57:56] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:57:56 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:57:56] "GET /health HTTP/1.1" 200 -
+2025-11-20 10:57:57 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:57:57] "GET /health HTTP/1.1" 200 -
+2025-11-20 10:57:57 INFO app.errors: 404: /static/style.css
+2025-11-20 10:57:57 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:57:57] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:57:57 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:57:57 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:57:57] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:58:07 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:58:07] "GET / HTTP/1.1" 200 -
+2025-11-20 10:58:08 INFO app.errors: 404: /static/style.css
+2025-11-20 10:58:08 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:58:08 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:58:08] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:58:08 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:58:08] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:58:08 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:58:08] "GET /health HTTP/1.1" 200 -
+2025-11-20 11:02:38 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:02:38] "GET / HTTP/1.1" 200 -
+2025-11-20 11:02:38 INFO app.errors: 404: /static/style.css
+2025-11-20 11:02:38 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:02:38] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 11:02:38 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 11:02:38 INFO app.errors: 404: /static/dropdown.js
+2025-11-20 11:02:38 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:02:38] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 11:02:38 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:02:38] "[33mGET /static/dropdown.js HTTP/1.1[0m" 404 -
+2025-11-20 11:02:38 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:02:38] "GET /health HTTP/1.1" 200 -
+2025-11-20 11:06:05 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:06:05] "GET / HTTP/1.1" 200 -
+2025-11-20 11:06:05 INFO app.errors: 404: /static/build/main.bundle.css
+2025-11-20 11:06:05 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:06:05] "[33mGET /static/build/main.bundle.css HTTP/1.1[0m" 404 -
+2025-11-20 11:06:05 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:06:05] "GET /health HTTP/1.1" 200 -
+2025-11-20 11:06:05 INFO app.errors: 404: /static/build/main.bundle.js
+2025-11-20 11:06:05 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:06:05] "[33mGET /static/build/main.bundle.js HTTP/1.1[0m" 404 -
+2025-11-20 11:07:43 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:07:43] "GET / HTTP/1.1" 200 -
+2025-11-20 11:07:43 INFO app.errors: 404: /static/build/main.bundle.css
+2025-11-20 11:07:43 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:07:43] "[33mGET /static/build/main.bundle.css HTTP/1.1[0m" 404 -
+2025-11-20 11:07:43 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:07:43] "GET /health HTTP/1.1" 200 -
+2025-11-20 11:07:43 INFO app.errors: 404: /static/build/main.bundle.js
+2025-11-20 11:07:43 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:07:43] "[33mGET /static/build/main.bundle.js HTTP/1.1[0m" 404 -
+2025-11-20 11:11:49 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:11:49] "GET / HTTP/1.1" 200 -
+2025-11-20 11:11:49 INFO app.errors: 404: /static/build/main.bundle.css
+2025-11-20 11:11:49 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:11:49] "[33mGET /static/build/main.bundle.css HTTP/1.1[0m" 404 -
+2025-11-20 11:11:49 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:11:49] "GET /health HTTP/1.1" 200 -
+2025-11-20 11:11:49 INFO app.errors: 404: /static/build/main.bundle.js
+2025-11-20 11:11:49 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:11:49] "[33mGET /static/build/main.bundle.js HTTP/1.1[0m" 404 -
+2025-11-20 11:11:53 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:11:53] "GET / HTTP/1.1" 200 -
+2025-11-20 11:11:54 INFO app.errors: 404: /static/build/main.bundle.css
+2025-11-20 11:11:54 INFO app.errors: 404: /static/build/main.bundle.js
+2025-11-20 11:11:54 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:11:54] "[33mGET /static/build/main.bundle.css HTTP/1.1[0m" 404 -
+2025-11-20 11:11:54 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:11:54] "[33mGET /static/build/main.bundle.js HTTP/1.1[0m" 404 -
+2025-11-20 11:11:54 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:11:54] "GET /health HTTP/1.1" 200 -
+2025-11-20 11:11:54 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:11:54] "GET / HTTP/1.1" 200 -
+2025-11-20 11:11:55 INFO app.errors: 404: /static/build/main.bundle.css
+2025-11-20 11:11:55 INFO app.errors: 404: /static/build/main.bundle.js
+2025-11-20 11:11:55 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:11:55] "[33mGET /static/build/main.bundle.css HTTP/1.1[0m" 404 -
+2025-11-20 11:11:55 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:11:55] "[33mGET /static/build/main.bundle.js HTTP/1.1[0m" 404 -
+2025-11-20 11:11:55 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:11:55] "GET /health HTTP/1.1" 200 -
+2025-11-20 11:11:56 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:11:56] "GET /health HTTP/1.1" 200 -
+2025-11-20 11:11:57 INFO app.errors: 404: /static/build/main.bundle.css
+2025-11-20 11:11:57 INFO app.errors: 404: /static/build/main.bundle.js
+2025-11-20 11:11:57 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:11:57] "[33mGET /static/build/main.bundle.css HTTP/1.1[0m" 404 -
+2025-11-20 11:11:57 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:11:57] "[33mGET /static/build/main.bundle.js HTTP/1.1[0m" 404 -
+2025-11-20 11:11:57 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:11:57] "GET /capabilities HTTP/1.1" 200 -
+2025-11-20 11:12:01 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:12:01] "GET / HTTP/1.1" 200 -
+2025-11-20 11:12:01 INFO app.errors: 404: /static/build/main.bundle.css
+2025-11-20 11:12:01 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:12:01] "[33mGET /static/build/main.bundle.css HTTP/1.1[0m" 404 -
+2025-11-20 11:12:01 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:12:01] "GET /health HTTP/1.1" 200 -
+2025-11-20 11:12:01 INFO app.errors: 404: /static/build/main.bundle.js
+2025-11-20 11:12:01 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:12:01] "[33mGET /static/build/main.bundle.js HTTP/1.1[0m" 404 -
+2025-11-20 11:12:18 INFO app.routes: /chat received
+2025-11-20 11:13:09 INFO httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-20 11:13:09 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:13:09] "POST /chat HTTP/1.1" 200 -
+2025-11-20 11:14:02 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:14:02] "GET / HTTP/1.1" 200 -
+2025-11-20 11:14:03 INFO app.errors: 404: /static/build/main.bundle.css
+2025-11-20 11:14:03 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:14:03] "[33mGET /static/build/main.bundle.css HTTP/1.1[0m" 404 -
+2025-11-20 11:14:03 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:14:03] "GET /health HTTP/1.1" 200 -
+2025-11-20 11:14:03 INFO app.errors: 404: /static/build/main.bundle.js
+2025-11-20 11:14:03 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:14:03] "[33mGET /static/build/main.bundle.js HTTP/1.1[0m" 404 -
+2025-11-20 11:15:33 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:15:33] "GET / HTTP/1.1" 200 -
+2025-11-20 11:15:33 INFO app.errors: 404: /static/build/main.bundle.css
+2025-11-20 11:15:33 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:15:33] "[33mGET /static/build/main.bundle.css HTTP/1.1[0m" 404 -
+2025-11-20 11:15:33 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:15:33] "GET /health HTTP/1.1" 200 -
+2025-11-20 11:15:33 INFO app.errors: 404: /static/build/main.bundle.js
+2025-11-20 11:15:33 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 11:15:33] "[33mGET /static/build/main.bundle.js HTTP/1.1[0m" 404 -
