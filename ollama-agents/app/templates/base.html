@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Ollama Agents{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/dropdown.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <h1 style="display:inline-block;margin-right:1rem;">{% block header %}Ollama Agents{% endblock %}</h1>
+            <nav class="menu">
+                <div class="dropdown">
+                    <a href="#">Menu ▼</a>
+                    <div class="dropdown-content">
+                        <a href="/">Home</a>
+                        <a href="/json">JSON Viewer</a>
+                        <a href="/health">Health</a>
+                        <a href="/capabilities">Capabilities</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Ollama Agents</p>
+    </footer>
+</body>
+</html>

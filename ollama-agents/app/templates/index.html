@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h2>Welcome to Ollama Agents</h2>
+<p>This is the index page for your Flask app.</p>
+
+<section id="chat-section">
+	<h3>Ask the Agent</h3>
+	<div class="chat-form">
+		<input id="messageInput" type="text" placeholder="Type your question here..." />
+		<button id="sendBtn">Send</button>
+		<button id="enterBtn">Enter</button>
+	</div>
+
+	<h4>Agent Response (editable)</h4>
+	<textarea id="responseBox" rows="8" cols="80" placeholder="Agent response will appear here..."></textarea>
+</section>
+
+<script>
+function sendMessage() {
+	return (async function () {
+		const msg = document.getElementById('messageInput').value;
+		if (!msg) return;
+		const payload = { message: msg, session_id: 'web' };
+		try {
+			const res = await fetch('/chat', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(payload)
+			});
+			const data = await res.json();
+			let text = '';
+			if (data && typeof data === 'object') {
+				if ('response' in data) text = data.response;
+				else text = JSON.stringify(data, null, 2);
+			} else {
+				text = String(data);
+			}
+			const box = document.getElementById('responseBox');
+			box.value = text;
+		} catch (err) {
+			document.getElementById('responseBox').value = 'Error: ' + err;
+		}
+	})();
+}
+
+document.getElementById('sendBtn').addEventListener('click', sendMessage);
+document.getElementById('enterBtn').addEventListener('click', sendMessage);
+
+// Send on Enter key press
+document.getElementById('messageInput').addEventListener('keydown', function (e) {
+	if (e.key === 'Enter') {
+		e.preventDefault();
+		sendMessage();
+	}
+});
+</script>
+
+{% endblock %}
