@@ -4,6 +4,10 @@
 <h2>Welcome to Ollama Agents</h2>
 <p>This is the index page for your Flask app.</p>
 
+<section id="model-info" style="margin-bottom:2rem;">
+	<div id="healthStatus" style="padding:0.75rem 1rem;background:#e9ecef;border-radius:6px;margin-bottom:1rem;font-weight:500;"></div>
+</section>
+
 <section id="chat-section">
 	<h3>Ask the Agent</h3>
 	<div class="chat-form">
@@ -17,6 +21,26 @@
 </section>
 
 <script>
+// Health check info section
+async function updateHealthStatus() {
+	const el = document.getElementById('healthStatus');
+	try {
+		const res = await fetch('/health', { headers: { 'Accept': 'application/json' } });
+		const data = await res.json();
+		if (data.status === 'healthy') {
+			el.textContent = 'Model is available and ready for use.';
+			el.style.color = '#198754'; // green
+		} else {
+			el.textContent = 'Model is unavailable, please check to ensure the model server is running before use.';
+			el.style.color = '#dc3545'; // red
+		}
+	} catch (err) {
+		el.textContent = 'Unable to check model status.';
+		el.style.color = '#dc3545';
+	}
+}
+updateHealthStatus();
+
 function sendMessage() {
 	return (async function () {
 		const msg = document.getElementById('messageInput').value;

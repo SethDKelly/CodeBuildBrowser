@@ -1,31 +1,27 @@
-# All route functions moved from flask_server.py
-from flask import request, jsonify, render_template
+# All route functions moved from flask_server.py (now as a Blueprint)
+from flask import Blueprint, request, jsonify, render_template
 import json
 import dataclasses
-import sys
-import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from ollama_app import app, agent
+import logging
+from agents.base_agent import BaseAgent
+
+logger = logging.getLogger(__name__)
+
+bp = Blueprint("main", __name__)
 
 
-@app.route("/")
+@bp.route("/")
 def index():
 	return render_template("index.html")
 
-@app.route("/json")
+@bp.route("/json")
 def json_view():
 	sample_data = {"message": "Hello, world!", "status": "success"}
 	return render_template("json.html", data=sample_data)
 
-@app.errorhandler(404)
-def error_404(e):
-	return render_template("error404.html"), 404
+# Error handlers are registered centrally in `app.errors.register_error_handlers`
 
-@app.errorhandler(410)
-def error_410(e):
-	return render_template("error410.html"), 410
-
-@app.route("/chat", methods=["POST"])
+@bp.route("/chat", methods=["POST"])
 def chat_endpoint():
 	"""
 	Chat with the AI agent (Flask version)
@@ -33,13 +29,14 @@ def chat_endpoint():
 	"""
 	data = request.get_json(force=True)
 	try:
-		# ChatRequest logic in route for simplicity
 		message = data.get("message")
 		session_id = data.get("session_id", "default")
 	except Exception as e:
 		return jsonify({"error": str(e)}), 400
 
 	try:
+		logger.info("/chat received", extra={"session_id": session_id})
+		agent = BaseAgent()
 		response = agent.chat(message)
 		# Normalize response to a JSON-serializable string in the `response` field
 		try:
@@ -55,22 +52,34 @@ def chat_endpoint():
 		resp = {"response": response_text, "session_id": session_id}
 		return jsonify(resp), 200
 	except Exception as e:
+		logger.exception("Error in /chat handler")
 		return jsonify({"error": str(e)}), 500
 
-@app.route("/capabilities", methods=["GET"])
+@bp.route("/capabilities", methods=["GET"])
 def get_capabilities():
 	"""
 	Get agent capabilities
 	"""
 	try:
+		agent = BaseAgent()
 		return jsonify({
 			"tools": [schema["function"]["name"] for schema in agent.tool_schemas],
-			"capabilities": agent.get_capabilities()
+			"capabilities": []  # No get_capabilities method in BaseAgent
 		})
 	except Exception as e:
+		logger.exception("Error getting capabilities")
 		return jsonify({"error": str(e)}), 500
 
-@app.route("/health", methods=["GET"])
+@bp.route("/health", methods=["GET"])
 def health_check():
-	"""Health check endpoint"""
-	return jsonify({"status": "healthy", "model": agent.model_name})
+	"""Health check endpoint
+	Returns JSON for API requests, HTML for browsers.
+	"""
+	agent = BaseAgent()
+	model = agent.model_name
+	status = "healthy"
+	# Content negotiation: JSON for API, HTML for browser
+	if "application/json" in (request.headers.get("Accept") or ""):
+		return jsonify({"model": model, "status": status})
+	# Otherwise, render HTML using a template that extends base.html
+	return render_template("health.html", model=model, status=status)

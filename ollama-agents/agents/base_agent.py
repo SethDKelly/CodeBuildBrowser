@@ -1,10 +1,19 @@
 # agents/base_agent.py
 import json
 import ollama
+import logging
 from typing import Dict, List, Callable, Any
+from dataclasses import dataclass, field, asdict
+
+logger = logging.getLogger(__name__)
+
+@dataclass
+class ResponseMessage:
+    role: str
+    content: str
 
 class BaseAgent:
-    def __init__(self, model_name: str = "llama3.1"):
+    def __init__(self, model_name: str = "qwen3:30b"):
         """
         Initialize the base agent with a specified model
         
@@ -37,21 +46,26 @@ class BaseAgent:
         Returns:
             Agent's response after processing tools if needed
         """
+        system_message = ResponseMessage("system", "You are a helpful assistant.")
+        user_message = ResponseMessage("user", f"Answer this question: {message}")
+
         try:
             # Initial response from model
             response = ollama.chat(
                 model=self.model_name,
-                messages=[{"role": "user", "content": message}],
-                tools=self.tool_schemas
+                messages=[system_message.__dict__, 
+                          user_message.__dict__],
+                #tools=self.tool_schemas
             )
             
             # Check if model wants to call tools
-            if response.get("message", {}).get("tool_calls"):
-                return self._handle_tool_calls(message, response)
-            else:
-                return response["message"]["content"]
+            #if response.get("message", {}).get("tool_calls"):
+            #    return self._handle_tool_calls(message, response)
+            #else:
+            #    return response["message"]["content"]
                 
         except Exception as e:
+            logger.exception("Error processing request in BaseAgent.chat")
             return f"Error processing request: {str(e)}"
             
     def _handle_tool_calls(self, original_message: str, response: Dict) -> str:
@@ -77,7 +91,11 @@ class BaseAgent:
             
             if function_name in self.tools:
                 # Execute the function
-                result = self.tools[function_name](**function_args)
+                try:
+                    result = self.tools[function_name](**function_args)
+                except Exception:
+                    logger.exception("Tool %s failed", function_name)
+                    result = f"Error executing tool {function_name}"
                 
                 # Add tool result to conversation
                 messages.append({

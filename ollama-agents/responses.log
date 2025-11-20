@@ -1,0 +1,1215 @@
+2025-11-20 10:04:27 INFO __main__: Ollama app initialized
+2025-11-20 10:04:27 INFO __main__: Starting Flask development server on 0.0.0.0:8000
+2025-11-20 10:04:27 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.0.107:8000
+2025-11-20 10:04:27 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-11-20 10:05:23 ERROR ollama-app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\routes.py", line 15, in index
+    return render_template("index.html")
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-11-20 10:05:23 ERROR app.errors: 500 internal server error on /
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\routes.py", line 15, in index
+    return render_template("index.html")
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-11-20 10:05:23 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:05:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-20 10:05:23 ERROR werkzeug: Error on request:
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\routes.py", line 15, in index
+    return render_template("index.html")
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 860, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\errors.py", line 25, in _handle_500
+    return render_template("error500.html"), 500
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error500.html
+2025-11-20 10:05:23 INFO app.errors: 404: /favicon.ico
+2025-11-20 10:05:23 ERROR ollama-app: Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\errors.py", line 15, in _handle_404
+    return render_template("error404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error404.html
+2025-11-20 10:05:23 ERROR app.errors: 500 internal server error on /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\errors.py", line 15, in _handle_404
+    return render_template("error404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error404.html
+2025-11-20 10:05:23 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:05:23] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-11-20 10:05:23 ERROR werkzeug: Error on request:
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\errors.py", line 15, in _handle_404
+    return render_template("error404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error404.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 860, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\errors.py", line 25, in _handle_500
+    return render_template("error500.html"), 500
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error500.html
+2025-11-20 10:10:25 INFO __main__: Ollama app initialized
+2025-11-20 10:10:25 INFO __main__: Starting Flask development server on 0.0.0.0:8000
+2025-11-20 10:10:25 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.0.107:8000
+2025-11-20 10:10:25 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-11-20 10:10:39 ERROR ollama-app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\routes.py", line 15, in index
+    return render_template("index.html")
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-11-20 10:10:39 ERROR app.errors: 500 internal server error on /
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\routes.py", line 15, in index
+    return render_template("index.html")
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-11-20 10:10:39 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:10:39] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-20 10:10:39 ERROR werkzeug: Error on request:
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\routes.py", line 15, in index
+    return render_template("index.html")
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 860, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\errors.py", line 25, in _handle_500
+    return render_template("error500.html"), 500
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error500.html
+2025-11-20 10:10:39 INFO app.errors: 404: /favicon.ico
+2025-11-20 10:10:40 ERROR ollama-app: Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\errors.py", line 15, in _handle_404
+    return render_template("error404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error404.html
+2025-11-20 10:10:40 ERROR app.errors: 500 internal server error on /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\errors.py", line 15, in _handle_404
+    return render_template("error404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error404.html
+2025-11-20 10:10:40 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:10:40] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-11-20 10:10:40 ERROR werkzeug: Error on request:
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\errors.py", line 15, in _handle_404
+    return render_template("error404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error404.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 860, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\errors.py", line 25, in _handle_500
+    return render_template("error500.html"), 500
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error500.html
+2025-11-20 10:12:24 ERROR ollama-app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\routes.py", line 15, in index
+    return render_template("index.html")
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-11-20 10:12:24 ERROR app.errors: 500 internal server error on /
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\routes.py", line 15, in index
+    return render_template("index.html")
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-11-20 10:12:24 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:12:24] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-20 10:12:24 ERROR werkzeug: Error on request:
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\routes.py", line 15, in index
+    return render_template("index.html")
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 860, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\errors.py", line 25, in _handle_500
+    return render_template("error500.html"), 500
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error500.html
+2025-11-20 10:12:24 INFO app.errors: 404: /favicon.ico
+2025-11-20 10:12:24 ERROR ollama-app: Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\errors.py", line 15, in _handle_404
+    return render_template("error404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error404.html
+2025-11-20 10:12:24 ERROR app.errors: 500 internal server error on /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\errors.py", line 15, in _handle_404
+    return render_template("error404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error404.html
+2025-11-20 10:12:24 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:12:24] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-11-20 10:12:24 ERROR werkzeug: Error on request:
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\errors.py", line 15, in _handle_404
+    return render_template("error404.html"), 404
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error404.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\app.py", line 860, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\app\errors.py", line 25, in _handle_500
+    return render_template("error500.html"), 500
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error500.html
+2025-11-20 10:14:29 INFO __main__: Ollama app initialized
+2025-11-20 10:14:29 INFO __main__: Starting Flask development server on 0.0.0.0:8000 (debug=True)
+2025-11-20 10:14:29 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.0.107:8000
+2025-11-20 10:14:29 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-11-20 10:14:29 INFO werkzeug:  * Restarting with stat
+2025-11-20 10:14:29 INFO __main__: Ollama app initialized
+2025-11-20 10:14:29 INFO __main__: Starting Flask development server on 0.0.0.0:8000 (debug=True)
+2025-11-20 10:14:29 WARNING werkzeug:  * Debugger is active!
+2025-11-20 10:14:29 INFO werkzeug:  * Debugger PIN: 122-528-945
+2025-11-20 10:14:37 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:14:37] "GET / HTTP/1.1" 200 -
+2025-11-20 10:14:37 INFO app.errors: 404: /static/style.css
+2025-11-20 10:14:37 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:14:37] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:14:37 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:14:37 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:14:37] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:14:37 INFO app.errors: 404: /favicon.ico
+2025-11-20 10:14:37 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:14:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-20 10:14:58 INFO app.routes: /chat received
+2025-11-20 10:15:00 ERROR agents.base_agent: Error processing request in BaseAgent.chat
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\agents\base_agent.py", line 45, in chat
+    response = ollama.chat(
+        model=self.model_name,
+        messages=[{"role": "user", "content": message}],
+        tools=self.tool_schemas
+    )
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\ollama\_client.py", line 365, in chat
+    return self._request(
+           ~~~~~~~~~~~~~^
+      ChatResponse,
+      ^^^^^^^^^^^^^
+    ...<14 lines>...
+      stream=stream,
+      ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\ollama\_client.py", line 189, in _request
+    return cls(**self._request_raw(*args, **kwargs).json())
+                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\ollama\_client.py", line 135, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2025-11-20 10:15:00 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:15:00] "POST /chat HTTP/1.1" 200 -
+2025-11-20 10:19:03 INFO werkzeug:  * Detected change in 'C:\\Users\\ollio\\development\\CodeBuildBrowser\\ollama-agents\\agents\\base_agent.py', reloading
+2025-11-20 10:19:03 INFO werkzeug:  * Restarting with stat
+2025-11-20 10:19:04 INFO __main__: Ollama app initialized
+2025-11-20 10:19:04 INFO __main__: Starting Flask development server on 0.0.0.0:8000 (debug=True)
+2025-11-20 10:19:04 WARNING werkzeug:  * Debugger is active!
+2025-11-20 10:19:04 INFO werkzeug:  * Debugger PIN: 122-528-945
+2025-11-20 10:19:06 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:19:06] "GET / HTTP/1.1" 200 -
+2025-11-20 10:19:07 INFO app.errors: 404: /static/style.css
+2025-11-20 10:19:07 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:19:07] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:19:07 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:19:07 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:19:07] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:19:13 INFO app.routes: /chat received
+2025-11-20 10:19:15 ERROR agents.base_agent: Error processing request in BaseAgent.chat
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\agents\base_agent.py", line 54, in chat
+    response = ollama.chat(
+        model=self.model_name,
+        messages=[system_message.__dict__, user_message.__dict__],
+        #tools=self.tool_schemas
+    )
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\ollama\_client.py", line 365, in chat
+    return self._request(
+           ~~~~~~~~~~~~~^
+      ChatResponse,
+      ^^^^^^^^^^^^^
+    ...<14 lines>...
+      stream=stream,
+      ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\ollama\_client.py", line 189, in _request
+    return cls(**self._request_raw(*args, **kwargs).json())
+                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\ollama\_client.py", line 135, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2025-11-20 10:19:15 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:19:15] "POST /chat HTTP/1.1" 200 -
+2025-11-20 10:19:23 INFO werkzeug:  * Detected change in 'C:\\Users\\ollio\\development\\CodeBuildBrowser\\ollama-agents\\agents\\base_agent.py', reloading
+2025-11-20 10:19:23 INFO werkzeug:  * Restarting with stat
+2025-11-20 10:19:23 INFO __main__: Ollama app initialized
+2025-11-20 10:19:23 INFO __main__: Starting Flask development server on 0.0.0.0:8000 (debug=True)
+2025-11-20 10:19:23 WARNING werkzeug:  * Debugger is active!
+2025-11-20 10:19:23 INFO werkzeug:  * Debugger PIN: 122-528-945
+2025-11-20 10:27:58 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:27:58] "GET / HTTP/1.1" 200 -
+2025-11-20 10:27:58 INFO app.errors: 404: /static/style.css
+2025-11-20 10:27:58 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:27:58] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:27:58 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:27:58 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:27:58] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:28:13 INFO app.routes: /chat received
+2025-11-20 10:28:15 ERROR agents.base_agent: Error processing request in BaseAgent.chat
+Traceback (most recent call last):
+  File "C:\Users\ollio\development\CodeBuildBrowser\ollama-agents\agents\base_agent.py", line 54, in chat
+    response = ollama.chat(
+        model=self.model_name,
+    ...<2 lines>...
+        #tools=self.tool_schemas
+    )
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\ollama\_client.py", line 365, in chat
+    return self._request(
+           ~~~~~~~~~~~~~^
+      ChatResponse,
+      ^^^^^^^^^^^^^
+    ...<14 lines>...
+      stream=stream,
+      ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\ollama\_client.py", line 189, in _request
+    return cls(**self._request_raw(*args, **kwargs).json())
+                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ollio\development\venv-genai\Lib\site-packages\ollama\_client.py", line 135, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2025-11-20 10:28:15 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:28:15] "POST /chat HTTP/1.1" 200 -
+2025-11-20 10:32:07 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:32:07] "GET / HTTP/1.1" 200 -
+2025-11-20 10:32:07 INFO app.errors: 404: /static/style.css
+2025-11-20 10:32:07 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:32:07] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:32:07 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:32:07 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:32:07] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:32:10 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:32:10] "GET / HTTP/1.1" 200 -
+2025-11-20 10:32:10 INFO app.errors: 404: /static/style.css
+2025-11-20 10:32:10 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:32:10 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:32:10] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:32:10 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:32:10] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:34:58 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:34:58] "GET / HTTP/1.1" 200 -
+2025-11-20 10:34:58 INFO app.errors: 404: /static/style.css
+2025-11-20 10:34:58 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:34:58] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:34:58 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:34:58 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:34:58] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:35:13 INFO __main__: Ollama app initialized
+2025-11-20 10:35:13 INFO __main__: Starting Flask development server on 0.0.0.0:8000 (debug=True)
+2025-11-20 10:35:13 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.0.107:8000
+2025-11-20 10:35:13 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-11-20 10:35:13 INFO werkzeug:  * Restarting with stat
+2025-11-20 10:35:14 INFO __main__: Ollama app initialized
+2025-11-20 10:35:14 INFO __main__: Starting Flask development server on 0.0.0.0:8000 (debug=True)
+2025-11-20 10:35:14 WARNING werkzeug:  * Debugger is active!
+2025-11-20 10:35:14 INFO werkzeug:  * Debugger PIN: 122-528-945
+2025-11-20 10:35:17 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:35:17] "GET / HTTP/1.1" 200 -
+2025-11-20 10:35:17 INFO app.errors: 404: /static/style.css
+2025-11-20 10:35:17 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:35:17] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:35:17 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:35:17 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:35:17] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:35:23 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:35:23] "GET / HTTP/1.1" 200 -
+2025-11-20 10:35:24 INFO app.errors: 404: /static/style.css
+2025-11-20 10:35:24 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:35:24 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:35:24] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:35:24 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:35:24] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:35:25 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:35:25] "GET /json HTTP/1.1" 200 -
+2025-11-20 10:35:26 INFO app.errors: 404: /static/style.css
+2025-11-20 10:35:26 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:35:26 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:35:26] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:35:26 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:35:26] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:35:29 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:35:29] "GET /health HTTP/1.1" 200 -
+2025-11-20 10:35:37 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:35:37] "GET /capabilities HTTP/1.1" 200 -
+2025-11-20 10:35:40 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:35:40] "GET / HTTP/1.1" 200 -
+2025-11-20 10:35:41 INFO app.errors: 404: /static/style.css
+2025-11-20 10:35:41 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:35:41] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:35:41 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:35:41 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:35:41] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:35:52 INFO app.routes: /chat received
+2025-11-20 10:36:49 INFO httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-20 10:36:49 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:36:49] "POST /chat HTTP/1.1" 200 -
+2025-11-20 10:45:30 INFO app.routes: /chat received
+2025-11-20 10:45:37 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:45:37] "GET /health HTTP/1.1" 200 -
+2025-11-20 10:46:23 INFO httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-20 10:46:23 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:46:23] "POST /chat HTTP/1.1" 200 -
+2025-11-20 10:48:12 INFO werkzeug:  * Detected change in 'C:\\Users\\ollio\\development\\CodeBuildBrowser\\ollama-agents\\app\\routes.py', reloading
+2025-11-20 10:48:12 INFO werkzeug:  * Restarting with stat
+2025-11-20 10:48:12 INFO __main__: Ollama app initialized
+2025-11-20 10:48:12 INFO __main__: Starting Flask development server on 0.0.0.0:8000 (debug=True)
+2025-11-20 10:48:13 WARNING werkzeug:  * Debugger is active!
+2025-11-20 10:48:13 INFO werkzeug:  * Debugger PIN: 122-528-945
+2025-11-20 10:49:51 INFO werkzeug:  * Detected change in 'C:\\Users\\ollio\\development\\CodeBuildBrowser\\ollama-agents\\app\\routes.py', reloading
+2025-11-20 10:49:51 INFO werkzeug:  * Restarting with stat
+2025-11-20 10:49:52 INFO __main__: Ollama app initialized
+2025-11-20 10:49:52 INFO __main__: Starting Flask development server on 0.0.0.0:8000 (debug=True)
+2025-11-20 10:49:52 WARNING werkzeug:  * Debugger is active!
+2025-11-20 10:49:52 INFO werkzeug:  * Debugger PIN: 122-528-945
+2025-11-20 10:52:13 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:52:13] "GET / HTTP/1.1" 200 -
+2025-11-20 10:52:13 INFO app.errors: 404: /static/style.css
+2025-11-20 10:52:13 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:52:13] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:52:13 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:52:13 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:52:13] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:52:13 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:52:13] "GET /health HTTP/1.1" 200 -
+2025-11-20 10:55:19 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:55:19] "GET / HTTP/1.1" 200 -
+2025-11-20 10:55:20 INFO app.errors: 404: /static/style.css
+2025-11-20 10:55:20 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:55:20] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:55:20 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:55:20 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:55:20] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:55:20 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:55:20] "GET /health HTTP/1.1" 200 -
+2025-11-20 10:55:23 INFO werkzeug:  * Detected change in 'C:\\Users\\ollio\\development\\CodeBuildBrowser\\ollama-agents\\app\\routes.py', reloading
+2025-11-20 10:55:23 INFO werkzeug:  * Restarting with stat
+2025-11-20 10:55:23 INFO __main__: Ollama app initialized
+2025-11-20 10:55:23 INFO __main__: Starting Flask development server on 0.0.0.0:8000 (debug=True)
+2025-11-20 10:55:23 WARNING werkzeug:  * Debugger is active!
+2025-11-20 10:55:23 INFO werkzeug:  * Debugger PIN: 122-528-945
+2025-11-20 10:55:24 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:55:24] "GET / HTTP/1.1" 200 -
+2025-11-20 10:55:24 INFO app.errors: 404: /static/style.css
+2025-11-20 10:55:24 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:55:24] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:55:24 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:55:24 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:55:24] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:55:24 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:55:24] "GET /health HTTP/1.1" 200 -
+2025-11-20 10:55:27 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:55:27] "GET / HTTP/1.1" 200 -
+2025-11-20 10:55:27 INFO app.errors: 404: /static/style.css
+2025-11-20 10:55:27 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:55:27] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-11-20 10:55:27 INFO app.errors: 404: /static/dropdown.css
+2025-11-20 10:55:27 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:55:27] "[33mGET /static/dropdown.css HTTP/1.1[0m" 404 -
+2025-11-20 10:55:27 INFO werkzeug: 127.0.0.1 - - [20/Nov/2025 10:55:27] "GET /health HTTP/1.1" 200 -

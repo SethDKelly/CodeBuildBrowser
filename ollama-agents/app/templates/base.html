@@ -3,31 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Ollama Agents{% endblock %}</title>
-    <link rel="stylesheet" href="/static/style.css">
-    <link rel="stylesheet" href="/static/dropdown.css">
+    <link rel="stylesheet" href="/static/build/main.bundle.css">
 </head>
 <body>
     <header>
-        <div class="nav">
-            <h1 style="display:inline-block;margin-right:1rem;">{% block header %}Ollama Agents{% endblock %}</h1>
-            <nav class="menu">
-                <div class="dropdown">
-                    <a href="#">Menu ▼</a>
-                    <div class="dropdown-content">
-                        <a href="/">Home</a>
-                        <a href="/json">JSON Viewer</a>
-                        <a href="/health">Health</a>
-                        <a href="/capabilities">Capabilities</a>
-                    </div>
-                </div>
+        <div class="nav-bar">
+            <nav class="nav-menu">
+                <a href="/">Home</a>
+                <a href="/health">Health</a>
+                <a href="/capabilities">Capabilities</a>
             </nav>
         </div>
     </header>
     <main>
         {% block content %}{% endblock %}
     </main>
-    <footer>
-        <p>&copy; 2025 Ollama Agents</p>
-    </footer>
+        <footer>
+                <p>&copy; 2025 Ollama Agents</p>
+        </footer>
+        <script src="/static/build/main.bundle.js" defer></script>
 </body>
 </html>

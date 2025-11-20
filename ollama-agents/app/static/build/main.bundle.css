@@ -1,3 +1,5 @@
+/* Bundled main CSS: concatenation of style.css + dropdown.css */
+
 body {
     font-family: Arial, sans-serif;
     background: #f8f9fa;
@@ -127,4 +129,38 @@ nav {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+
+/* Horizontal dark navigation bar styles */
+.nav-bar {
+    background: #d37254;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    border-bottom: 1px solid #b872d3;
+}
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+    background: none;
+    padding: 0;
+}
+.nav-menu a {
+    color: #54a3d3;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1.1rem;
+    border-radius: 6px;
+    background: none;
+    transition: background 0.18s, color 0.18s;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+.nav-menu a:visited {
+    color: #b872d3;
+}
+.nav-menu a:hover,
+.nav-menu a:focus {
+    background: #b872d3;
+    color: #fff;
+    outline: none;
 }
